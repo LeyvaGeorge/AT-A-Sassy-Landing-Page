@@ -1,3 +1,6 @@
+@import "btnConfig";
+@import "utilities";
+@import "config";
 
 * {
   box-sizing: border-box;
@@ -10,7 +13,12 @@ body {
   font-family: $font-stack;
   line-height: 1;
 }
-
+#btns-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+}
 img {
   border-radius: 50%;
 }
@@ -19,15 +27,53 @@ a {
   text-decoration: none;
 }
 
-.hero {
-  // This is where the bulk of the SCSS styling needs to be done
-
-  // Take a look at the other files we've built already. How can they be useful here?
+// Take a look at the other files we've built already. How can they be useful here?
 
   // Also, take time to review the features of SCSS we've already covered:
   // 1. $variables
   // 2. nesting (dont forget about the ampersand (&) parent selector!)
   // 3. At-Rules
+.hero {
+  // This is where the bulk of the SCSS styling needs to be done
+  padding-bottom: 1em;
+  .box {
+    background-color: grey;
+    nav {
+      display: flex;
+      justify-content: space-between;
+      .banner {
+        display: flex;
+        align-items: center;  
+      }
+      ul {
+        display: flex;
+        justify-content: space-around;
+        list-style-type: none;
+        li {
+          margin: 1em;
+        }
+        
+      }
+    }
+    .hero-content {
+      display: flex;
+      flex-direction: row;
+      div {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+      }
+      img {
+        width:50%;
+      }
+    }  
+  }
+  
+  
+
+
 }
 
 // This code is related to some of the aspects of SCSS we have yet to cover.
